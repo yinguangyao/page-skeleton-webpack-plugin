@@ -11,7 +11,7 @@ const cssnext = require('postcss-cssnext')({
     'Android >= 4.0',
   ],
 })
-const SkeletonPlugin = require('page-skeleton-webpack-plugin').SkeletonPlugin
+const SkeletonPlugin = require('@airpay/page-skeleton-webpack-plugin').SkeletonPlugin
 
 module.exports = {
   mode: 'development',
@@ -77,7 +77,7 @@ module.exports = {
       pathname: path.resolve(__dirname, `./shell`),
       staticDir: path.resolve(__dirname, './dist'),
       routes: ['/'],
-      port: '7890',
+      port: '7892',
       loading: 'chiaroscuro',
       svg: {
         color: '#EFEFEF',
@@ -104,7 +104,7 @@ module.exports = {
       hide: ['.index-dashedline_7B79b3W', '.Rating-actived_GBtiHkB_0'],
       grayBlock: ['#header'],
       cssUnit: 'rem',
-      headless: true,
+      headless: false,
       // minify: false,
       cookies: [{
         name: 'SID',

@@ -25,7 +25,7 @@ class Skeleton {
       // Launch the browser
       this.browser = await puppeteer.launch({ headless })
     } catch (err) {
-      log(err)
+      log.error(err)
     }
   }
 
@@ -276,7 +276,7 @@ class Skeleton {
       try {
         await Promise.all(promises)
       } catch (err) {
-        log(err)
+        log.error(err)
       }
       this.pages = null
     }
